@@ -1,0 +1,1 @@
+#see local notes re: slimbox JS and Jquery bug.
