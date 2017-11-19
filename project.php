@@ -33,8 +33,6 @@ $id=$_GET["id"];
 include('admin/mysqli/dbinclude17.php');
 $query="SELECT * from $table WHERE `id`=$id";
 $result=mysqli_query($mysqli,$query);
-//$record=mysqli_fetch_assoc($result);
-//printf ("%s (%s)\n",$row["Lastname"],$row["Age"]);
 $num=mysqli_num_rows($result);
 $i=0;
 while ($i <$num) {
