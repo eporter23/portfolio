@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/core.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>About emilyporter.net</title>
+<!-- InstanceEndEditable -->
+<link href="design/css/master.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="design/css/print.css" rel="stylesheet" type="text/css" media="print"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  //enhanced in-page analytics for same-page link variants
+  	var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+	_gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+	//end in-page plugin
+  _gaq.push(['_setAccount', 'UA-37940842-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<script src="design/js/portfolio.js"></script>
+<!--[if lt IE 9]>
+<script src="design/js/html5shiv.js" type="text/javascript"></script>
+<![endif]-->
+<!-- InstanceBeginEditable name="head" -->
+<!-- venn -->
+<link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+<script src="archive/canvas/d3.v3/d3.v3.min.js"></script>
+<!-- InstanceEndEditable -->
+<!-- InstanceParam name="id" type="text" value="About" -->
+</head>
+<body id="About">
+<div id="container">
+<header role="banner">
+<a href="#main-content" class="accessible">Skip to content</a>
+<!-- #BeginLibraryItem "/Library/header.lbi" --><a id="logo" href="index.html"><img src="design/img/logo.png" alt="porter://portfolio"/></a><!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/topnavPortfolio.lbi" --><nav id="primary-nav" role="navigation">
+      <ul>
+        <li><a href="index.html" id="home">Home</a></li>
+        <li><a href="web.php" id="web">Web</a></li>
+        <li><a href="graphics.php" id="graphics">Graphics &amp; 3D</a></li>
+        <li><a href="experimental.php" id="experimental">Experimental</a></li>
+        <li><a href="about.html" id="about">About</a></li>
+      </ul>
+    </nav><!-- #EndLibraryItem --></header>
+
+  <section id="main-content" role="main">
+    <div id="content">
+      <h1 id="heading"><!-- InstanceBeginEditable name="content-title" -->About my work<!-- InstanceEndEditable --></h1>
+      <!-- InstanceBeginEditable name="content" -->
+      <div id="venn-diagram"></div>
+
+<script type="text/javascript"> 
+var w = 425,
+    h = 320;
+	
+var vennradius = 125;
+var texty = 60; //text label vertical alignment
+//create the main svg wrapper
+var svg = d3.select("#venn-diagram").append("svg:svg")
+    .attr("width", w)
+    .attr("height", h)
+	.attr("title", "Venn Diagram")
+	.attr("desc", "Diagram of user experience design: color-coded circles showing the intersection of visual design, information architecture, and front end development");
+//left circle
+svg.append("svg:circle")
+    .attr("cx", vennradius)
+    .attr("cy", vennradius)
+    .attr("r", vennradius)
+    .style("fill", "#E0D491")
+    .style("fill-opacity", ".75");
+//right circle
+svg.append("svg:circle")
+    .attr("cx", 300)
+    .attr("cy", vennradius)
+    .attr("r", vennradius)
+    .style("fill", "#AFA4CF")
+    .style("fill-opacity", ".5");
+//lower circle
+svg.append("svg:circle")
+    .attr("cx", 212)
+    .attr("cy", vennradius*1.5)
+    .attr("r", vennradius)
+    .style("fill", "#9CC2D2")
+    .style("fill-opacity", ".5");
+	
+	//text
+svg.append("text")      // text label 1: upper left
+        .attr("x", 78 )
+        .attr("y",  texty )
+		.attr("id","left-label")
+        .style("text-anchor", "middle")
+        .text("Visual Design");
+		
+		svg.append("text")      // text label 2: intersection
+		.attr("id",'nexus')
+       //.style("text-anchor", "middle")	
+        .text("User Experience")
+		.attr("transform", function(d) {
+                return "translate(210 80) rotate(90 0 0)" 
+                })
+		/*.attr("x", vennradius+75 )
+        .attr("y",  120 )*/
+		;
+		
+		svg.append("text")      // text label 3: upper right
+        .attr("x", 313 )
+        .attr("y",  texty )
+		.attr("id","right-label")
+        .style("text-anchor", "middle")
+        .text("Information Architecture");
+		
+		svg.append("text")      // text label 4: bottom
+        .attr("x", 213 )
+        .attr("y",  270 )
+		.attr("id","bottom-left")
+        .style("text-anchor", "middle")
+        .text("Front-End Development");
+ 
+    </script>
+      <p>I earned a Master's degree in <a href="http://dm.lmc.gatech.edu/program/ms-program/">Information Design and Technology</a> (now renamed to Digital Media) from the Georgia Institute of Technology in Atlanta, GA. I'm located  in the Atlanta area, where my employers and clients have included Emory University, the Georgia Institute of Technology, A2D Company, Inc., and Virtually Better, Inc. </p>
+      <h2>Academia</h2>
+      <p>I'm dedicated to the higher education mission, working for academic institutions and related startups, with a focus on content/digital asset management and library technology development including metadata analysis, information architecture, process analysis, and software product management. </p>
+      <h2>Freelance</h2>
+      <p> In my freelance work, I've designed and developed for web, 3d, and print. I have a broad range of digital media production experience that includes visual design, interaction design, information architecture, usability testing, web development, and content management. </p>
+      <p>I specialize in providing thoughtful, maintainable designs for small business, education, and nonprofit.</p>
+      <h2>Contact</h2>
+      <br/>
+      <p><a href="https://www.linkedin.com/in/emilyporter/" class="nextlink">LinkedIn</a></p>
+      <p><a href="mailto:porterdigitalmedia@gmail.com" class="nextlink">Email</a></p>
+
+      <!-- <a href="http://lcc.gatech.edu/graduate/dmms/index.php"> -->
+      <!-- InstanceEndEditable -->
+      </div>
+  </section><!-- #BeginLibraryItem "/Library/footer.lbi" --><footer role="contentinfo"><span class="hidden">http://www.emilyporter.net </span>©2013 Emily Porter</footer><!-- #EndLibraryItem --></div>
+<!-- end container -->
+</body>
+<!-- InstanceEnd --></html>
