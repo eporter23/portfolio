@@ -37,10 +37,6 @@ $num=mysqli_num_rows($result);
 $i=0;
 while ($i <$num) {
 //ASSOCIATE THE VARIABLES WITH THE DB FIELDS
-
-//FIX! 2017. this syntax no longer works. recreate as object? See edit-list-search.php in admin
-
-
 $name=mysqli_result($result,$i,"name");
 $client=mysqli_result($result,$i,"client");
 $year=mysqli_result($result,$i,"year");
