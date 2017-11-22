@@ -24,6 +24,7 @@ include('dbinclude17.php');
 $query="DELETE from $table WHERE id=$id" or die("Your query did not run.");
 $result = mysqli_query($mysqli,$query);
 //$result = mysql_db_query($db,$query,$connect);
+mysqli_close($mysqli);
 print("Your record has been deleted");
 ?>
 </p>
